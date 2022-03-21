@@ -34,6 +34,9 @@ public class GreetingControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	//Bruno Baldarena - Pós Graduação FULL STACAK SENAC
+
+  //Esse metodo realiza uma chamada GET e se o status de retorno for 'OK' o response em JSON é "Hello, World!"
 	@Test
 	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
 
@@ -41,6 +44,7 @@ public class GreetingControllerTests {
 				.andExpect(jsonPath("$.content").value("Hello, World!"));
 	}
 
+	//Esse metodo realiza uma chamada GET passando os seguintes parametros 'Name' && 'Spring Community' se o status de retorno da chamada for 'OK' o response em JSON é "Hello, Spring Community!"
 	@Test
 	public void paramGreetingShouldReturnTailoredMessage() throws Exception {
 
